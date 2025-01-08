@@ -3,7 +3,7 @@ import axiosInstance from '../axiosConfig/axiosConfig';
 import { Oval } from 'react-loader-spinner'; // You can install react-loader-spinner via npm or yarn
 import { useDispatch } from 'react-redux';
 import { login } from '../store/authSlice';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { setCookie } from '../axiosConfig/cookieFunc';
 
 const RegisterPage = () => {
@@ -109,7 +109,8 @@ const RegisterPage = () => {
           )}
         </form>
         <div className="text-center mt-4">
-          <p className="text-sm text-gray-600">Already have an account? <a href="/login" className="text-green-500">Login</a></p>
+          <p className="text-sm text-gray-600">Already have an account?
+             <Link to="/login" className="text-green-500">Login</Link></p>
         </div>
       </div>
     </div>

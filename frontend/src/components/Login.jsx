@@ -4,7 +4,7 @@ import { RingLoader } from 'react-spinners'; // Importing the RingLoader for the
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../store/authSlice';
 import { setCookie } from '../axiosConfig/cookieFunc';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [username, setusername] = useState('');
@@ -77,7 +77,7 @@ const LoginPage = () => {
               <input type="checkbox" id="remember" className="mr-2" />
               <label htmlFor="remember" className="text-sm text-gray-600">Remember me</label>
             </div>
-            <a href="#" className="text-sm text-green-500">Forgot Password?</a>
+           
           </div>
           {/* Show loader when loading is true */}
           <button
@@ -95,7 +95,7 @@ const LoginPage = () => {
           </button>
         </form>
         <div className="text-center mt-4">
-          <p className="text-sm text-gray-600">Don't have an account? <a href="/register" className="text-green-500">Sign up</a></p>
+          <p className="text-sm text-gray-600">Don't have an account? <Link to="/register" className="text-green-500">Sign up</Link></p>
         </div>
       </div>
     </div>
